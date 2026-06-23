@@ -26,18 +26,19 @@ const staggerContainer = {
 };
 
 const pressItems = [
-  { pub: "The National Times", title: "Why Grassroots Organizing is Outpacing Traditional Lobbying", date: "Oct 2023" },
-  { pub: "Policy Weekly", title: "Reframing the Climate Debate for Bipartisan Appeal", date: "Aug 2023" },
-  { pub: "Civic Action Podcast", title: "Interview: Building Coalitions that Last", date: "May 2023" },
-  { pub: "Strategic Review", title: "The New Playbook for Issue Advocacy", date: "Feb 2023" },
-  { pub: "Urban Quarterly", title: "Housing Policy in the Digital Age", date: "Nov 2022" },
+  { pub: "Devex", title: "How Global INGOs Are Rethinking Brand Coherence Across Affiliates", date: "Jun 2024" },
+  { pub: "The New Humanitarian", title: "Crisis Communications in the Field: Lessons from the Middle East", date: "Nov 2022" },
+  { pub: "Alliance Magazine", title: "Donor Relations in the Age of Radical Transparency", date: "Apr 2022" },
+  { pub: "Comms2Point0", title: "Cross-Cultural Leadership and the Future of International Development Communications", date: "Sep 2021" },
+  { pub: "Africa Development Bank Insights", title: "From Visibility to Influence: Building Advocacy Infrastructure That Lasts", date: "Mar 2020" },
+  { pub: "ILO Regional Forum", title: "Panel: Corporate ESG Communications in Emerging Markets", date: "Oct 2019" },
 ];
 
 export default function Press() {
   return (
     <Layout>
       <motion.div {...pageTransition} className="flex-grow flex flex-col py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
@@ -48,27 +49,27 @@ export default function Press() {
               Press & Media
             </motion.h1>
             <motion.p variants={fadeUp} className="text-muted-foreground text-lg max-w-md font-light">
-              Selected op-eds, interviews, and features discussing policy shifts, strategic communications, and campaign outcomes.
+              Selected features, op-eds, and speaking engagements across international development, humanitarian affairs, and global advocacy.
             </motion.p>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
           className="flex flex-col mb-32"
         >
           {pressItems.map((article, i) => (
-            <motion.a 
+            <motion.a
               href="#"
-              key={i} 
+              key={i}
               variants={fadeUp}
               className="flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-border group hover:border-primary transition-all duration-500"
               data-testid={`link-press-item-${i}`}
             >
               <div className="flex flex-col md:flex-row gap-4 md:gap-12 md:items-center w-full">
-                <span className="text-primary font-medium tracking-widest uppercase text-sm w-48 shrink-0">
+                <span className="text-primary font-medium tracking-widest uppercase text-sm w-52 shrink-0">
                   {article.pub}
                 </span>
                 <h4 className="text-2xl md:text-3xl font-serif group-hover:translate-x-2 transition-transform duration-500">
@@ -87,7 +88,7 @@ export default function Press() {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -95,18 +96,18 @@ export default function Press() {
           className="bg-card border border-border p-12 md:p-20 text-center flex flex-col items-center"
         >
           <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-serif mb-6">
-            Looking for a speaker or commentator?
+            Looking for a speaker or strategic advisor?
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-muted-foreground mb-10 max-w-xl">
-            I am available for panels, podcast interviews, and commentary on advocacy strategy, narrative building, and public policy.
+            Available for executive panels, podcast interviews, keynotes, and expert commentary on international development communications, humanitarian affairs, and global advocacy strategy.
           </motion.p>
           <motion.div variants={fadeUp}>
-            <Link 
+            <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-3 bg-foreground text-background px-8 py-4 rounded-none hover:bg-primary transition-colors duration-300 text-lg font-medium"
               data-testid="btn-press-contact"
             >
-              Invite me to speak
+              Invite me to speak <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
         </motion.div>

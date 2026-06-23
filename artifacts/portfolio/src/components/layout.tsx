@@ -25,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
           <Link href="/" className="font-serif text-2xl tracking-tight" data-testid="link-home-logo">
-            AR.
+            LMK.
           </Link>
           
           {/* Desktop Nav */}
@@ -104,8 +104,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="py-8 px-6 md:px-12 border-t border-border flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground w-full mt-auto">
-        <p>&copy; {new Date().getFullYear()} Alexandra Rivera.</p>
-        <p>Advocacy & Communications</p>
+        <p>&copy; {new Date().getFullYear()} Lute Maekaeka Kazembe.</p>
+        <p>Strategic Communications & Global Advocacy</p>
       </footer>
     </div>
   );

@@ -16,47 +16,59 @@ const fadeUp = {
 
 const campaigns = [
   {
-    title: "The Clean Water Coalition Initiative",
-    role: "Lead Strategist",
-    tag: "Environmental Advocacy",
-    description: "United 40+ grassroots organizations and policy tanks to pass comprehensive state-level water protection legislation. Managed media relations, earning coverage in top-tier national outlets and shifting public sentiment.",
+    title: "Oxfam International",
+    subtitle: "Global Advocacy & Brand Transformation",
+    role: "Deputy Director, Advocacy, Campaigns & Engagement / Head of Brand & Communications",
+    period: "Feb 2023 – Aug 2025",
+    tag: "Global Advocacy",
+    description: "Directed global communications strategy across 30+ country affiliates, protecting trademark compliance and engineering data-driven storytelling frameworks that transformed donor confidence and organizational coherence.",
     outcomes: [
-      "Passed landmark state legislation with bipartisan support",
-      "Secured 50+ media placements including NYT and Washington Post",
-      "Mobilized over 10,000 constituent contacts to legislators"
+      "Unified 30+ global affiliates under a single shared communications engine",
+      "Boosted organizational decision-making efficiency by 50% through systems redesign",
+      "Engineered data-driven storytelling frameworks enhancing donor confidence and retention",
+      "Protected and enforced global trademark compliance across all affiliate markets"
     ]
   },
   {
-    title: "Fair Housing Now",
-    role: "Communications Director",
-    tag: "Housing Policy",
-    description: "Designed a multi-channel advocacy campaign that reframed the housing debate. Produced rapid-response messaging, legislative briefings, and a digital narrative strategy that reached 2M+ residents.",
+    title: "Medair",
+    subtitle: "Middle East Humanitarian Portfolio",
+    role: "Regional Communications Manager, Middle East",
+    period: "Sep 2021 – Dec 2022",
+    tag: "Humanitarian Affairs",
+    description: "Managed 11 direct reports across 8 countries, stewarding a $20M communications and engagement portfolio. Coordinated high-level UN and media field missions to maximize stakeholder trust in complex crisis environments.",
     outcomes: [
-      "Shifted narrative frame from 'property rights' to 'community stability'",
-      "Grew digital organizing list by 300% over 6 months",
-      "Resulted in $50M state budget allocation for affordable housing"
+      "Stewarded a $20M humanitarian communications portfolio across 8 countries",
+      "Managed and developed a team of 11 direct reports across the region",
+      "Produced award-winning campaigns driving a 60% increase in regional brand visibility",
+      "Coordinated UN and international media field missions in active crisis contexts"
     ]
   },
   {
-    title: "Youth Civic Engagement Project",
-    role: "Advisory Board & Campaign Lead",
-    tag: "Civic Engagement",
-    description: "Launched an initiative to increase voter turnout among underrepresented youth. Built the communication infrastructure that trained 500+ student organizers and resulted in a 15% increase in youth voter registration.",
+    title: "Japan Tobacco International",
+    subtitle: "Corporate & ESG Communications",
+    role: "Corporate Communications Manager, Southern Africa",
+    period: "Jul 2019 – Dec 2020",
+    tag: "Corporate Communications",
+    description: "Spearheaded regional ILO-aligned campaigns that drove a 60% surge in digital visibility. Oversaw a $2M sustainable social enterprise fund, aligning corporate ESG commitments with community impact and brand credibility.",
     outcomes: [
-      "Trained 500+ student organizers across 20 campuses",
-      "Achieved 15% YoY increase in youth voter registration",
-      "Produced award-winning digital video campaign"
+      "Drove a 60% surge in digital visibility through targeted ILO-aligned campaigns",
+      "Oversaw a $2M sustainable social enterprise fund with measurable community outcomes",
+      "Aligned corporate ESG strategy with Southern African regulatory and reputational standards",
+      "Strengthened stakeholder relationships across government, civil society, and media"
     ]
   },
   {
-    title: "Tech For Good Coalition",
-    role: "Public Affairs Consultant",
-    tag: "Digital Rights",
-    description: "Guided a coalition of civil rights groups advocating for ethical technology legislation. Coordinated stakeholder meetings, drafted policy memos, and organized a widely-covered press conference.",
+    title: "Plan International Zambia",
+    subtitle: "Country Advocacy & Fundraising",
+    role: "Country Communications Manager",
+    period: "Sep 2010 – Sep 2013",
+    tag: "Development & Fundraising",
+    description: "Achieved a 200% increase in national visibility and generated over $500K in 6 months through international fundraising broadcast content. Built the communications infrastructure that positioned Plan International as a leading voice in Zambian child rights advocacy.",
     outcomes: [
-      "Drafted key language adopted into final committee bill",
-      "Organized press conference with 15+ participating lawmakers",
-      "Established ongoing advisory relationship with legislative staff"
+      "Generated over $500K in international fundraising revenue within 6 months",
+      "Achieved a 200% increase in national organizational visibility",
+      "Produced fundraising broadcast content distributed across international donor networks",
+      "Established the communications infrastructure for long-term country advocacy presence"
     ]
   }
 ];
@@ -71,7 +83,7 @@ export default function Work() {
   return (
     <Layout>
       <motion.div {...pageTransition} className="flex-grow flex flex-col py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={{
@@ -81,14 +93,14 @@ export default function Work() {
           className="mb-16"
         >
           <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif mb-6">
-            Work & Campaigns
+            Work & Experience
           </motion.h1>
           <motion.p variants={fadeUp} className="text-xl text-muted-foreground max-w-2xl font-light">
-            A selection of campaigns and initiatives focused on narrative shift and policy impact.
+            A record of executive-level communications and advocacy leadership across international development, humanitarian affairs, and global advocacy.
           </motion.p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -99,8 +111,8 @@ export default function Work() {
               key={tag}
               onClick={() => setActiveTag(tag)}
               className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors ${
-                activeTag === tag 
-                  ? "bg-foreground text-background" 
+                activeTag === tag
+                  ? "bg-foreground text-background"
                   : "bg-transparent text-foreground hover:bg-muted"
               }`}
               data-testid={`filter-btn-${tag.replace(/\s+/g, '-').toLowerCase()}`}
@@ -123,23 +135,29 @@ export default function Work() {
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start"
                 data-testid={`work-card-${idx}`}
               >
-                <div className="lg:col-span-4 flex flex-col gap-4 sticky top-32">
+                <div className="lg:col-span-4 flex flex-col gap-4 lg:sticky top-32">
                   <div className="inline-flex max-w-fit px-3 py-1 bg-card border border-border text-xs uppercase tracking-widest text-primary">
                     {campaign.tag}
                   </div>
                   <h2 className="text-3xl md:text-4xl font-serif leading-tight">
                     {campaign.title}
                   </h2>
+                  <p className="text-base font-serif italic text-muted-foreground">
+                    {campaign.subtitle}
+                  </p>
                   <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                    Role: {campaign.role}
+                    {campaign.role}
+                  </p>
+                  <p className="text-sm text-muted-foreground/70 tracking-wide">
+                    {campaign.period}
                   </p>
                 </div>
-                
+
                 <div className="lg:col-span-8 flex flex-col gap-8 bg-card p-8 md:p-12 border border-border">
                   <p className="text-lg md:text-xl text-foreground leading-relaxed">
                     {campaign.description}
                   </p>
-                  
+
                   <div>
                     <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-4">
                       Key Outcomes
@@ -147,7 +165,7 @@ export default function Work() {
                     <ul className="flex flex-col gap-3">
                       {campaign.outcomes.map((outcome, i) => (
                         <li key={i} className="flex gap-3 items-start">
-                          <span className="text-primary mt-1.5">•</span>
+                          <span className="text-primary mt-1.5 shrink-0">•</span>
                           <span className="text-foreground/90">{outcome}</span>
                         </li>
                       ))}

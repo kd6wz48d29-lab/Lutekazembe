@@ -1,0 +1,61 @@
+Act as an expert copywriter and UI/UX developer. Update our multi-page portfolio application completely to match the executive branding and specific career profile of my client, Lute Maekaeka Kazembe. 
+
+Please parse the client's actual data below and carefully map it into the existing template components across all 5 live pages. Maintain the high-end editorial styling, Tailwind classes, and Framer Motion animations exactly as they are—simply swap out the placeholders and variables with this premium content.
+
+### GLOBAL IDENTITY UPDATES (All Pages & Footer)
+- Change all brand initials, headers, and copyright footers from "AR" / "Alexandra Rivera" to "Lute Maekaeka Kazembe" or "LMK".
+
+### 1. HOME PAGE
+- EDITORIAL HERO HEADLINE: A bold, high-impact value proposition. Use: "Driving Global Influence, Visibility, and Impact Across International Development Networks."
+- HERO SUBHEADLINE: "Visionary Strategic Communications & Global Advocacy Leader | Executive Director-Level Advisor"
+- FEATURED CAMPAIGNS / WORK CARD 1 (Top Slot): 
+  * Role: Deputy Director, Advocacy, Campaigns & Engagement
+  * Organization: Oxfam International
+  * Description: "Unified 30+ global affiliates under a shared communications engine. Strengthened global crisis systems and boosted organizational decision-making efficiency by 50%."
+- FEATURED CAMPAIGNS / WORK CARD 2:
+  * Role: Regional Communications Manager (Middle East)
+  * Organization: Medair
+  * Description: "Directed a humanitarian portfolio across eight countries, producing award-winning campaigns that drove a 60% increase in regional brand visibility."
+
+### 2. ABOUT PAGE
+- BIO NARRATIVE (Two-column layout): Turn this text into a compelling, polished bio: "With over 15 years of global leadership experience, Lute has shaped narratives, led high-performing multicultural teams, and driven policy and brand transformation across Africa, the Middle East, Asia, and South America. Bringing lived experience from low- and middle-income countries alongside an executive perspective on navigating complex international systems, Lute transforms communications into a strategic engine for equity, trust, and sustainable outcomes."
+- EXPERTISE GRID / SCROLLING SKILLS MARQUEE: Map these exact core skills: "Strategic Communications, Global Advocacy, International Development, Campaign Strategy, Stakeholder Engagement, Crisis Communication, Reputation Management, Executive Leadership, Brand Strategy, Public Affairs, Donor Relations, Policy Influence, Media Relations, Cross-Cultural Leadership, Digital Engagement, Risk Management."
+
+### 3. WORK / PORTFOLIO PAGE
+Map the deep-dive project grid using these core career highlights, cleaning up the presentation into executive results:
+- PROJECT 1: "Oxfam International (Feb 2023 – Aug 2025) — Global Advocacy & Brand Transformation" 
+  * Focus: Directed global communication across 30+ countries, protected trademark compliance, and engineered data-driven storytelling frameworks that enhanced donor confidence.
+- PROJECT 2: "Medair (Sep 2021 – Dec 2022) — Middle East Humanitarian Portfolio"
+  * Focus: Managed 11 direct reports across 8 countries, stewarded a $20M portfolio, and coordinated high-level UN and media field missions to maximize stakeholder trust.
+- PROJECT 3: "Japan Tobacco International (Jul 2019 – Dec 2020) — Corporate & ESG Communications"
+  * Focus: Spearheaded regional ILO campaigns driving a 60% surge in digital visibility, and oversaw a $2M sustainable social enterprise fund.
+- PROJECT 4: "Plan International Zambia (Sep 2010 – Sep 2013) — Country Advocacy & Fundraising"
+  * Focus: Achieved a 200% increase in national visibility and generated over $500K in 6 months through international fundraising broadcast content.
+
+### 4. CONTACT PAGE
+- Keep the validated contact form layout intact. Update any template text strings to match a professional consultation call-to-action for an Executive Director-level consultant.
+
+Please run a clean update on the files and present the final polished version of the multi-page site. Here is the complete document text for your reference:
+
+=== CLIENT DOCUMENT DATA ===
+NAME: Lute Maekaeka Kazembe
+LOCATION: Nairobi, Kenya
+EMAIL: Lute.Kazembe@outlook.com
+LINKEDIN: linkedin.com/in/lutekazembe
+
+EXPERIENCE DETAILS:
+- Oxfam International: Deputy Director, Advocacy, Campaigns & Engagement / Head of Brand and Communications (Feb 2023 – Aug 2025)
+- Medair: Regional Communications Manager, Middle East (Sep 2021 – Dec 2022)
+- Destination Livingstone / FCDO UK: Project Manager, Zambia (Feb 2021 – Sep 2021)
+- Japan Tobacco International: Corporate Communications Manager, Southern Africa (Jul 2019 – Dec 2020)
+- Ella Lyman Cabot Trust: Project Director, Zambia (Mar 2017 – Feb 2019)
+- Global Girls Giving Circle: Programme Development Director (Mar 2016 – Feb 2017)
+- Sun International Hotels: Corporate Communications Manager, Zambia (Sep 2013 – Feb 2016)
+- Plan International Zambia: Country Communications Manager (Sep 2010 – Sep 2013)
+
+EDUCATION:
+- London School of Hygiene & Tropical Medicine: Certificate, Epidemiology & Research Methods
+- Johns Hopkins University: Certificate, Health Communications & Advocacy
+- University of Michigan: Master’s Fellow, Communications and Policy Development
+- University of Namibia: Diploma, Public Administration
+============================

@@ -25,58 +25,74 @@ const staggerContainer = {
 
 const skills = [
   "Strategic Communications",
+  "Global Advocacy",
+  "International Development",
+  "Campaign Strategy",
+  "Stakeholder Engagement",
+  "Crisis Communication",
+  "Reputation Management",
+  "Executive Leadership",
+  "Brand Strategy",
   "Public Affairs",
+  "Donor Relations",
+  "Policy Influence",
   "Media Relations",
-  "Coalition Building",
-  "Policy Analysis",
-  "Crisis Management",
-  "Narrative Strategy",
-  "Grassroots Organizing",
-  "Stakeholder Engagement"
+  "Cross-Cultural Leadership",
+  "Digital Engagement",
+  "Risk Management",
 ];
 
 const orgs = [
-  "Global Policy Institute", 
-  "Center for Civic Action", 
-  "National Housing Trust", 
-  "Urban Future Coalition"
+  "Oxfam International",
+  "Medair",
+  "Japan Tobacco International",
+  "Plan International",
+  "FCDO UK",
+  "Sun International Hotels",
+];
+
+const education = [
+  { institution: "London School of Hygiene & Tropical Medicine", credential: "Certificate, Epidemiology & Research Methods" },
+  { institution: "Johns Hopkins University", credential: "Certificate, Health Communications & Advocacy" },
+  { institution: "University of Michigan", credential: "Master's Fellow, Communications and Policy Development" },
+  { institution: "University of Namibia", credential: "Diploma, Public Administration" },
 ];
 
 export default function About() {
   return (
     <Layout>
       <motion.div {...pageTransition} className="flex-grow flex flex-col py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
           className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32"
         >
-          <div className="lg:col-span-5">
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif mb-8 sticky top-32">
+          <div className="lg:col-span-4">
+            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif mb-8 lg:sticky top-32">
               About
             </motion.h1>
           </div>
-          
-          <div className="lg:col-span-7 flex flex-col gap-8 text-lg md:text-xl text-foreground/80 leading-relaxed font-light">
+
+          <div className="lg:col-span-8 flex flex-col gap-8 text-lg md:text-xl text-foreground/80 leading-relaxed font-light">
             <motion.p variants={fadeUp}>
-              I am an advocacy and communications strategist with over a decade of experience driving policy change through narrative power. My work is rooted in the belief that effective policy doesn't happen in a vacuum—it happens when we connect institutional levers with grassroots urgency.
+              With over 15 years of global leadership experience, Lute Maekaeka Kazembe has shaped narratives, led high-performing multicultural teams, and driven policy and brand transformation across Africa, the Middle East, Asia, and South America. Bringing lived experience from low- and middle-income countries alongside an executive perspective on navigating complex international systems, Lute transforms communications into catalysts for systemic change.
             </motion.p>
             <motion.p variants={fadeUp}>
-              I have directed campaigns that shift public sentiment on complex issues spanning environmental justice, housing equity, and digital rights. From managing rapid-response war rooms to crafting long-term coalition strategies, I specialize in distilling complicated policy into compelling stories that motivate action.
+              From directing global advocacy campaigns at Oxfam International — unifying 30+ affiliates under a single communications architecture — to stewarding a $20M humanitarian portfolio across eight countries at Medair, Lute has consistently operated at the intersection of strategic leadership and field-level urgency. This rare combination produces communications that are both institutionally credible and deeply human.
             </motion.p>
-            
+
             <motion.blockquote variants={fadeUp} className="my-10 pl-6 border-l-2 border-primary text-3xl md:text-4xl font-serif italic text-foreground leading-snug">
-              "The most enduring policy victories begin by changing what the public believes is possible."
+              "The most powerful communications don't just reach audiences — they move institutions."
             </motion.blockquote>
-            
+
             <motion.p variants={fadeUp}>
-              Whether partnering with community organizers, advising elected officials, or speaking on national media platforms, my approach centers on authenticity, precise messaging, and unwavering strategic focus.
+              Whether advising C-suite executives, coordinating UN field missions, or launching regional brand campaigns from crisis contexts, Lute brings an unwavering commitment to equity, precision, and results. Open to Executive Director-level roles across international development, humanitarian affairs, and global advocacy.
             </motion.p>
           </div>
         </motion.div>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -86,17 +102,17 @@ export default function About() {
           <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-serif mb-12">
             Core Expertise
           </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-border">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-border">
             {skills.map((skill, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 variants={fadeUp}
                 className="group relative p-8 border-[0.5px] border-border overflow-hidden bg-background"
                 data-testid={`skill-cell-${idx}`}
               >
                 <div className="absolute inset-0 bg-card translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-0" />
-                <h4 className="relative z-10 text-xl font-medium tracking-wide group-hover:text-primary transition-colors duration-300">
+                <h4 className="relative z-10 text-base font-medium tracking-wide group-hover:text-primary transition-colors duration-300">
                   {skill}
                 </h4>
               </motion.div>
@@ -104,18 +120,43 @@ export default function About() {
           </div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="mb-32"
+        >
+          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-serif mb-12">
+            Education
+          </motion.h2>
+          <div className="flex flex-col divide-y divide-border border-y border-border">
+            {education.map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className="flex flex-col md:flex-row md:items-center justify-between py-8 gap-3"
+                data-testid={`education-item-${i}`}
+              >
+                <h4 className="text-xl font-serif">{item.institution}</h4>
+                <p className="text-muted-foreground text-sm font-medium tracking-wide md:text-right">{item.credential}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
           className="py-12 border-t border-border"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
             <motion.h3 variants={fadeUp} className="text-xl font-serif text-muted-foreground whitespace-nowrap">
-              Trusted by
+              Experience with
             </motion.h3>
-            <motion.div variants={fadeUp} className="flex flex-wrap justify-center md:justify-end gap-8 md:gap-12 text-lg font-medium text-muted-foreground/60">
+            <motion.div variants={fadeUp} className="flex flex-wrap justify-start md:justify-end gap-8 md:gap-12 text-lg font-medium text-muted-foreground/60">
               {orgs.map((org, i) => (
                 <span key={i} className="hover:text-foreground transition-colors duration-300 cursor-default">
                   {org}

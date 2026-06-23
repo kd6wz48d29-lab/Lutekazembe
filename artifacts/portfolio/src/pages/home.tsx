@@ -25,40 +25,58 @@ const staggerContainer = {
   }
 };
 
+const marqueeSkills = [
+  "Strategic Communications",
+  "Global Advocacy",
+  "International Development",
+  "Campaign Strategy",
+  "Stakeholder Engagement",
+  "Crisis Communication",
+  "Reputation Management",
+  "Executive Leadership",
+  "Brand Strategy",
+  "Public Affairs",
+  "Donor Relations",
+  "Policy Influence",
+  "Media Relations",
+  "Cross-Cultural Leadership",
+  "Digital Engagement",
+  "Risk Management",
+];
+
 export default function Home() {
   return (
     <Layout>
       <motion.div {...pageTransition} className="flex-grow flex flex-col">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex flex-col justify-center px-6 md:px-12 py-20 max-w-7xl mx-auto w-full">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-4xl"
+            className="max-w-5xl"
           >
             <motion.p variants={fadeUp} className="text-primary font-medium tracking-wider uppercase text-sm mb-6">
-              Alexandra Rivera
+              Lute Maekaeka Kazembe — Nairobi, Kenya
             </motion.p>
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.05] mb-8 text-foreground">
-              Advocacy & <br className="hidden md:block"/> Communications Director
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.08] mb-8 text-foreground">
+              Driving Global Influence, Visibility, and Impact Across International Development Networks.
             </motion.h1>
             <motion.div variants={fadeUp} className="max-w-2xl">
-              <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed mb-12 font-light">
-                I build campaigns that shape public narrative and shift policy. 
-                Bridging the gap between grassroots urgency and institutional strategy to drive enduring change.
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 font-light">
+                Visionary Strategic Communications & Global Advocacy Leader. Executive Director-Level Advisor with 15+ years shaping narratives and driving policy transformation across Africa, the Middle East, Asia, and South America.
               </p>
             </motion.div>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-6 items-center">
-              <Link 
-                href="/work" 
+              <Link
+                href="/work"
                 className="inline-flex items-center justify-center gap-3 bg-foreground text-background px-8 py-4 rounded-none hover:bg-primary transition-colors duration-300 text-lg font-medium"
                 data-testid="link-hero-work"
               >
                 View My Work
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-3 border-b border-foreground pb-1 text-lg hover:text-primary hover:border-primary transition-colors duration-300 px-4"
                 data-testid="link-hero-contact"
               >
@@ -70,23 +88,19 @@ export default function Home() {
 
         {/* Marquee Section */}
         <div className="w-full overflow-hidden border-y border-border py-4 bg-card whitespace-nowrap flex">
-          <motion.div 
+          <motion.div
             className="flex gap-12 text-sm uppercase tracking-widest text-muted-foreground"
-            animate={{ x: [0, -1000] }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            animate={{ x: [0, -2400] }}
+            transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
           >
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="flex gap-12 items-center">
-                <span>Strategic Communications</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span>Public Affairs</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span>Media Relations</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span>Coalition Building</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span>Crisis Management</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex gap-12 items-center shrink-0">
+                {marqueeSkills.map((skill, j) => (
+                  <span key={j} className="flex items-center gap-12 shrink-0">
+                    {skill}
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  </span>
+                ))}
               </div>
             ))}
           </motion.div>
@@ -95,7 +109,7 @@ export default function Home() {
         {/* Featured Work */}
         <section className="py-24 px-6 md:px-12 bg-background flex-grow">
           <div className="max-w-7xl mx-auto w-full">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -104,7 +118,7 @@ export default function Home() {
             >
               <div className="md:w-1/3 flex flex-col items-start">
                 <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-serif mb-8 md:sticky top-32">
-                  Featured <br/> Campaigns
+                  Featured <br /> Campaigns
                 </motion.h2>
                 <motion.div variants={fadeUp}>
                   <Link href="/work" className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium hover:text-primary hover:border-primary transition-colors duration-300" data-testid="link-featured-work">
@@ -112,23 +126,23 @@ export default function Home() {
                   </Link>
                 </motion.div>
               </div>
-              
+
               <div className="md:w-2/3 flex flex-col gap-16">
                 {[
                   {
-                    title: "The Clean Water Coalition Initiative",
-                    role: "Lead Strategist",
-                    description: "United 40+ grassroots organizations and policy tanks to pass comprehensive state-level water protection legislation. Managed media relations, earning coverage in top-tier national outlets and shifting public sentiment."
+                    title: "Oxfam International",
+                    role: "Deputy Director, Advocacy, Campaigns & Engagement",
+                    description: "Unified 30+ global affiliates under a shared communications engine. Strengthened global crisis systems and boosted organizational decision-making efficiency by 50%."
                   },
                   {
-                    title: "Fair Housing Now",
-                    role: "Communications Director",
-                    description: "Designed a multi-channel advocacy campaign that reframed the housing debate. Produced rapid-response messaging, legislative briefings, and a digital narrative strategy that reached 2M+ residents."
+                    title: "Medair — Middle East Humanitarian Portfolio",
+                    role: "Regional Communications Manager",
+                    description: "Directed a humanitarian portfolio across eight countries, producing award-winning campaigns that drove a 60% increase in regional brand visibility."
                   }
                 ].map((work, i) => (
-                  <motion.div 
-                    key={i} 
-                    variants={fadeUp} 
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
                     className="group cursor-default"
                     data-testid={`card-home-work-${i}`}
                   >
