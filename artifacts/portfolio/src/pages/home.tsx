@@ -145,13 +145,15 @@ export default function Home() {
                     title: "Oxfam International",
                     role: "Deputy Director, Advocacy, Campaigns & Engagement",
                     description: "Unified 30+ global affiliates under a shared communications engine. Strengthened global crisis systems and boosted organizational decision-making efficiency by 50%.",
-                    img: "/images/campaign-1.jpg"
+                    img: "/images/campaign-1.jpg",
+                    logo: "/images/logo-oxfam.png"
                   },
                   {
                     title: "Medair — Middle East Humanitarian Portfolio",
                     role: "Regional Communications Manager",
                     description: "Directed a humanitarian portfolio across eight countries, producing award-winning campaigns that drove a 60% increase in regional brand visibility.",
-                    img: "/images/campaign-2.jpg"
+                    img: "/images/campaign-2.jpg",
+                    logo: "/images/logo-medair.png"
                   }
                 ].map((work, i) => (
                   <motion.div
@@ -169,9 +171,18 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col gap-4">
                       <span className="text-primary text-sm font-medium uppercase tracking-wider">{work.role}</span>
-                      <h3 className="text-3xl md:text-4xl font-serif group-hover:text-primary transition-colors duration-300">
-                        {work.title}
-                      </h3>
+                      <div className="flex items-center gap-4">
+                        {work.logo && (
+                          <img
+                            src={work.logo}
+                            alt={`${work.title} logo`}
+                            className="h-7 w-auto max-w-[120px] object-contain"
+                          />
+                        )}
+                        <h3 className="text-3xl md:text-4xl font-serif group-hover:text-primary transition-colors duration-300">
+                          {work.title}
+                        </h3>
+                      </div>
                       <p className="text-muted-foreground text-lg leading-relaxed mt-2 max-w-xl">
                         {work.description}
                       </p>
