@@ -26,12 +26,12 @@ const staggerContainer = {
 };
 
 const pressItems = [
-  { pub: "Devex", title: "How Global INGOs Are Rethinking Brand Coherence Across Affiliates", date: "Jun 2024" },
-  { pub: "The New Humanitarian", title: "Crisis Communications in the Field: Lessons from the Middle East", date: "Nov 2022" },
-  { pub: "Alliance Magazine", title: "Donor Relations in the Age of Radical Transparency", date: "Apr 2022" },
-  { pub: "Comms2Point0", title: "Cross-Cultural Leadership and the Future of International Development Communications", date: "Sep 2021" },
-  { pub: "Africa Development Bank Insights", title: "From Visibility to Influence: Building Advocacy Infrastructure That Lasts", date: "Mar 2020" },
-  { pub: "ILO Regional Forum", title: "Panel: Corporate ESG Communications in Emerging Markets", date: "Oct 2019" },
+  { pub: "Devex", logo: "/images/logo-devex.png", title: "How Global INGOs Are Rethinking Brand Coherence Across Affiliates", date: "Jun 2024" },
+  { pub: "The New Humanitarian", logo: "/images/logo-new-humanitarian.png", title: "Crisis Communications in the Field: Lessons from the Middle East", date: "Nov 2022" },
+  { pub: "Alliance Magazine", logo: "/images/logo-alliance.png", title: "Donor Relations in the Age of Radical Transparency", date: "Apr 2022" },
+  { pub: "Comms2Point0", logo: "/images/logo-press-3.png", title: "Cross-Cultural Leadership and the Future of International Development Communications", date: "Sep 2021" },
+  { pub: "Africa Development Bank Insights", logo: "/images/logo-afdb.png", title: "From Visibility to Influence: Building Advocacy Infrastructure That Lasts", date: "Mar 2020" },
+  { pub: "ILO Regional Forum", logo: "/images/logo-ilo.png", title: "Panel: Corporate ESG Communications in Emerging Markets", date: "Oct 2019" },
 ];
 
 export default function Press() {
@@ -69,9 +69,22 @@ export default function Press() {
               data-testid={`link-press-item-${i}`}
             >
               <div className="flex flex-col md:flex-row gap-4 md:gap-12 md:items-center w-full">
-                <span className="text-primary font-medium tracking-widest uppercase text-sm w-52 shrink-0">
-                  {article.pub}
-                </span>
+                <div className="w-52 shrink-0 flex items-center">
+                  {article.logo ? (
+                    <img
+                      src={article.logo}
+                      alt={article.pub}
+                      className="h-8 w-auto max-w-[160px] object-contain"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                      }}
+                    />
+                  ) : null}
+                  <span className={`text-primary font-medium tracking-widest uppercase text-sm ${article.logo ? 'hidden' : ''}`}>
+                    {article.pub}
+                  </span>
+                </div>
                 <h4 className="text-2xl md:text-3xl font-serif group-hover:translate-x-2 transition-transform duration-500">
                   {article.title}
                 </h4>
