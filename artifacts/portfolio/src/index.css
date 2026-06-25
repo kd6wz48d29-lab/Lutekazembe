@@ -178,6 +178,24 @@
   z-index: -1;
 }
 
+/* Campaign image thumbnails — Home page featured cards */
+.home-campaign-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  background: hsl(40 20% 90%);
+  overflow: hidden;
+}
+.home-campaign-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+.group:hover .home-campaign-img-wrap img {
+  transform: scale(1.03);
+}
+
 /* Campaign images — Work page cards */
 .work-img-wrap {
   width: 100%;

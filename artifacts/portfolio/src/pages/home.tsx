@@ -132,12 +132,14 @@ export default function Home() {
                   {
                     title: "Oxfam International",
                     role: "Deputy Director, Advocacy, Campaigns & Engagement",
-                    description: "Unified 30+ global affiliates under a shared communications engine. Strengthened global crisis systems and boosted organizational decision-making efficiency by 50%."
+                    description: "Unified 30+ global affiliates under a shared communications engine. Strengthened global crisis systems and boosted organizational decision-making efficiency by 50%.",
+                    img: "/images/campaign-1.jpg"
                   },
                   {
                     title: "Medair — Middle East Humanitarian Portfolio",
                     role: "Regional Communications Manager",
-                    description: "Directed a humanitarian portfolio across eight countries, producing award-winning campaigns that drove a 60% increase in regional brand visibility."
+                    description: "Directed a humanitarian portfolio across eight countries, producing award-winning campaigns that drove a 60% increase in regional brand visibility.",
+                    img: "/images/campaign-2.jpg"
                   }
                 ].map((work, i) => (
                   <motion.div
@@ -146,6 +148,13 @@ export default function Home() {
                     className="group cursor-default"
                     data-testid={`card-home-work-${i}`}
                   >
+                    <div className="home-campaign-img-wrap mb-6">
+                      <img
+                        src={work.img}
+                        alt={work.title}
+                        onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.background = 'hsl(40 20% 90%)'; (e.target as HTMLImageElement).style.display = 'none'; }}
+                      />
+                    </div>
                     <div className="flex flex-col gap-4">
                       <span className="text-primary text-sm font-medium uppercase tracking-wider">{work.role}</span>
                       <h3 className="text-3xl md:text-4xl font-serif group-hover:text-primary transition-colors duration-300">
