@@ -153,7 +153,15 @@ export default function Work() {
                   </p>
                 </div>
 
-                <div className="lg:col-span-8 flex flex-col gap-8 bg-card p-8 md:p-12 border border-border">
+                <div className="lg:col-span-8 flex flex-col gap-8 bg-card border border-border overflow-hidden">
+                  <div className="work-img-wrap">
+                    <img
+                      src={`/images/campaign-${idx + 1}.jpg`}
+                      alt={`${campaign.title} campaign image`}
+                      onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.background = 'hsl(40 20% 90%)'; (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
+                  </div>
+                  <div className="p-8 md:p-12 flex flex-col gap-8">
                   <p className="text-lg md:text-xl text-foreground leading-relaxed">
                     {campaign.description}
                   </p>
@@ -170,6 +178,7 @@ export default function Work() {
                         </li>
                       ))}
                     </ul>
+                  </div>
                   </div>
                 </div>
               </motion.div>

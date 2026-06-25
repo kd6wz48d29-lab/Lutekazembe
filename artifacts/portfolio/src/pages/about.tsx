@@ -69,9 +69,19 @@ export default function About() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32"
         >
           <div className="lg:col-span-4">
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif mb-8 lg:sticky top-32">
+            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif mb-8">
               About
             </motion.h1>
+            <motion.div variants={fadeUp} className="lg:sticky top-32">
+              <div className="headshot-wrap">
+                <img
+                  src="/images/headshot.jpg"
+                  alt="Lute Maekaeka Kazembe"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+                <div className="headshot-placeholder" />
+              </div>
+            </motion.div>
           </div>
 
           <div className="lg:col-span-8 flex flex-col gap-8 text-lg md:text-xl text-foreground/80 leading-relaxed font-light">

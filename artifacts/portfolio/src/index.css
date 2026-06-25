@@ -155,3 +155,40 @@
     @apply font-serif tracking-tight font-normal;
   }
 }
+
+/* Headshot — About page left column */
+.headshot-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: hsl(40 20% 90%);
+  overflow: hidden;
+  position: relative;
+}
+.headshot-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.headshot-placeholder {
+  position: absolute;
+  inset: 0;
+  background: hsl(40 20% 88%);
+  z-index: -1;
+}
+
+/* Campaign images — Work page cards */
+.work-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: hsl(40 20% 90%);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.work-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
