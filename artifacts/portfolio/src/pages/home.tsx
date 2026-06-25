@@ -49,41 +49,53 @@ export default function Home() {
     <Layout>
       <motion.div {...pageTransition} className="flex-grow flex flex-col">
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] flex flex-col justify-center px-6 md:px-12 py-20 max-w-7xl mx-auto w-full">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-5xl"
-          >
-            <motion.p variants={fadeUp} className="text-primary font-medium tracking-wider uppercase text-sm mb-6">
-              Lute Maekaeka Kazembe — Nairobi, Kenya
-            </motion.p>
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.08] mb-8 text-foreground">
-              Driving Global Influence, Visibility, and Impact Across International Development Networks.
-            </motion.h1>
-            <motion.div variants={fadeUp} className="max-w-2xl">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 font-light">
-                Visionary Strategic Communications & Global Advocacy Leader. Executive Director-Level Advisor with 15+ years shaping narratives and driving policy transformation across Africa, the Middle East, Asia, and South America.
-              </p>
+        <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
+          {/* Background image + overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/images/hero-bg.jpg"
+              alt=""
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-foreground/65" />
+          </div>
+          {/* Content */}
+          <div className="relative z-10 px-6 md:px-12 py-20 max-w-7xl mx-auto w-full">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="max-w-5xl"
+            >
+              <motion.p variants={fadeUp} className="text-primary font-medium tracking-wider uppercase text-sm mb-6">
+                Lute Maekaeka Kazembe — Nairobi, Kenya
+              </motion.p>
+              <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.08] mb-8 text-background">
+                Driving Global Influence, Visibility, and Impact Across International Development Networks.
+              </motion.h1>
+              <motion.div variants={fadeUp} className="max-w-2xl">
+                <p className="text-lg md:text-xl leading-relaxed mb-12 font-light text-background/75">
+                  Visionary Strategic Communications & Global Advocacy Leader. Executive Director-Level Advisor with 15+ years shaping narratives and driving policy transformation across Africa, the Middle East, Asia, and South America.
+                </p>
+              </motion.div>
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-6 items-center">
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center gap-3 bg-background text-foreground px-8 py-4 rounded-none hover:bg-primary hover:text-background transition-colors duration-300 text-lg font-medium"
+                  data-testid="link-hero-work"
+                >
+                  View My Work
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 border-b border-background/70 pb-1 text-lg text-background hover:text-primary hover:border-primary transition-colors duration-300 px-4"
+                  data-testid="link-hero-contact"
+                >
+                  Get in Touch <ArrowRight className="w-5 h-5" />
+                </Link>
+              </motion.div>
             </motion.div>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-6 items-center">
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center gap-3 bg-foreground text-background px-8 py-4 rounded-none hover:bg-primary transition-colors duration-300 text-lg font-medium"
-                data-testid="link-hero-work"
-              >
-                View My Work
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 border-b border-foreground pb-1 text-lg hover:text-primary hover:border-primary transition-colors duration-300 px-4"
-                data-testid="link-hero-contact"
-              >
-                Get in Touch <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Marquee Section */}
