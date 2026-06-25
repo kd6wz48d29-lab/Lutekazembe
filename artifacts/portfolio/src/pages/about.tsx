@@ -180,7 +180,7 @@ export default function About() {
             <motion.div variants={fadeUp} className="flex flex-wrap justify-start md:justify-end gap-8 md:gap-10 items-center">
               {orgs.map((org, i) => (
                 org.logo ? (
-                  <div key={i} className="h-8 flex items-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+                  <div key={i} className="h-8 flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300">
                     <img
                       src={org.logo}
                       alt={org.name}

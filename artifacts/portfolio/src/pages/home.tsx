@@ -139,7 +139,7 @@ export default function Home() {
                   { name: "African Development Bank", logo: "/images/logo-afdb.png" },
                   { name: "ILO", logo: "/images/logo-ilo.png" },
                 ].map((outlet, i) => (
-                  <div key={i} className="h-7 flex items-center opacity-50 hover:opacity-90 transition-opacity duration-300 grayscale hover:grayscale-0">
+                  <div key={i} className="h-7 flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300">
                     <img
                       src={outlet.logo}
                       alt={outlet.name}
