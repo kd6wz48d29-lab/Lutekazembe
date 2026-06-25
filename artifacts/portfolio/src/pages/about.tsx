@@ -43,19 +43,19 @@ const skills = [
 ];
 
 const orgs = [
-  "Oxfam International",
-  "Medair",
-  "Japan Tobacco International",
-  "Plan International",
-  "FCDO UK",
-  "Sun International Hotels",
+  { name: "Oxfam International", logo: "/images/logo-oxfam.png" },
+  { name: "Medair", logo: "/images/logo-medair.png" },
+  { name: "Japan Tobacco International", logo: "/images/logo-jti.png" },
+  { name: "Plan International", logo: "/images/logo-plan.png" },
+  { name: "FCDO UK", logo: null },
+  { name: "Sun International Hotels", logo: null },
 ];
 
 const education = [
-  { institution: "London School of Hygiene & Tropical Medicine", credential: "Certificate, Epidemiology & Research Methods" },
-  { institution: "Johns Hopkins University", credential: "Certificate, Health Communications & Advocacy" },
-  { institution: "University of Michigan", credential: "Master's Fellow, Communications and Policy Development" },
-  { institution: "University of Namibia", credential: "Diploma, Public Administration" },
+  { institution: "London School of Hygiene & Tropical Medicine", credential: "Certificate, Epidemiology & Research Methods", logo: "/images/logo-university-london.png" },
+  { institution: "Johns Hopkins University", credential: "Certificate, Health Communications & Advocacy", logo: "/images/logo-johns-hopkins.png" },
+  { institution: "University of Michigan", credential: "Master's Fellow, Communications and Policy Development", logo: "/images/logo-university-michigan.png" },
+  { institution: "University of Namibia", credential: "Diploma, Public Administration", logo: "/images/logo-unam.png" },
 ];
 
 export default function About() {
@@ -145,10 +145,21 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="flex flex-col md:flex-row md:items-center justify-between py-8 gap-3"
+                className="flex flex-col md:flex-row md:items-center justify-between py-8 gap-4"
                 data-testid={`education-item-${i}`}
               >
-                <h4 className="text-xl font-serif">{item.institution}</h4>
+                <div className="flex items-center gap-5">
+                  {item.logo && (
+                    <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                      <img
+                        src={item.logo}
+                        alt={`${item.institution} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  )}
+                  <h4 className="text-xl font-serif">{item.institution}</h4>
+                </div>
                 <p className="text-muted-foreground text-sm font-medium tracking-wide md:text-right">{item.credential}</p>
               </motion.div>
             ))}
@@ -166,11 +177,21 @@ export default function About() {
             <motion.h3 variants={fadeUp} className="text-xl font-serif text-muted-foreground whitespace-nowrap">
               Experience with
             </motion.h3>
-            <motion.div variants={fadeUp} className="flex flex-wrap justify-start md:justify-end gap-8 md:gap-12 text-lg font-medium text-muted-foreground/60">
+            <motion.div variants={fadeUp} className="flex flex-wrap justify-start md:justify-end gap-8 md:gap-10 items-center">
               {orgs.map((org, i) => (
-                <span key={i} className="hover:text-foreground transition-colors duration-300 cursor-default">
-                  {org}
-                </span>
+                org.logo ? (
+                  <div key={i} className="h-8 flex items-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+                    <img
+                      src={org.logo}
+                      alt={org.name}
+                      className="h-full w-auto max-w-[120px] object-contain"
+                    />
+                  </div>
+                ) : (
+                  <span key={i} className="text-lg font-medium text-muted-foreground/60 hover:text-foreground transition-colors duration-300 cursor-default">
+                    {org.name}
+                  </span>
+                )
               ))}
             </motion.div>
           </div>
