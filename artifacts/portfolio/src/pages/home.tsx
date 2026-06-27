@@ -118,40 +118,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Featured In — Media Logo Strip */}
-        <section className="py-12 px-6 md:px-12 border-b border-border bg-background">
-          <div className="max-w-7xl mx-auto w-full">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
-            >
-              <motion.p variants={fadeUp} className="text-xs uppercase tracking-widest text-muted-foreground whitespace-nowrap shrink-0">
-                Featured in
-              </motion.p>
-              <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-8 md:gap-12">
-                {[
-                  { name: "Devex", logo: "/images/logo-devex.png" },
-                  { name: "The New Humanitarian", logo: "/images/logo-new-humanitarian.png" },
-                  { name: "Alliance Magazine", logo: "/images/logo-alliance.png" },
-                  { name: "African Development Bank", logo: "/images/logo-afdb.png" },
-                  { name: "ILO", logo: "/images/logo-ilo.png" },
-                ].map((outlet, i) => (
-                  <div key={i} className="h-7 flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    <img
-                      src={outlet.logo}
-                      alt={outlet.name}
-                      className="h-full w-auto max-w-[110px] object-contain"
-                    />
-                  </div>
-                ))}
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Featured Work */}
         <section className="py-24 px-6 md:px-12 bg-background flex-grow">
           <div className="max-w-7xl mx-auto w-full">
